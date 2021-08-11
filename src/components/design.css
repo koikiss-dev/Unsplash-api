@@ -29,12 +29,9 @@ img {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 15px;
-  grid-row-gap: 0px;
+  grid-row-gap: 15px;
   justify-content: center;
   width: 90%;
-}
-.cont img:nth-child(1n + 1) {
-  margin: 10px;
 }
 .rot{
    border-radius: 20px !important;
