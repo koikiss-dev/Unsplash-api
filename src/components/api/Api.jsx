@@ -15,8 +15,8 @@ const Api = () => {
     if (e.target.value !== "") {
       setIm(results);
       e.target.value = " ";
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   return (
