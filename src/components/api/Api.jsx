@@ -12,9 +12,9 @@ const Api = () => {
       urlBase + "&query=" + e.target.value + "&client_id=" + apikey
     );
     const { results } = await fe.json();
-    if (e.target.value === "") {
+    if (e.target.value !== "") {
       setIm(results);
-      e.target.value = "";
+      e.target.value = " ";
     }
     setLoading(false);
   };
