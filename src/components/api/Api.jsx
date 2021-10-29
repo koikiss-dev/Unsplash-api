@@ -1,9 +1,10 @@
 import { apikey } from "./key.json";
 import React, { useState } from "react";
 import "../design.css";
+import { usePhoto } from "../../hooks/usePhoto";
 
 const Api = () => {
-  const urlBase = "https://api.unsplash.com/search/photos?page=1";
+  /* const urlBase = "https://api.unsplash.com/search/photos?page=1";
   const [im, setIm] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -17,7 +18,8 @@ const Api = () => {
       e.target.value = " ";
       setLoading(false);
     }
-  };
+  }; */
+  const [getImage, loading, im,] = usePhoto()
 
   return (
     <>
