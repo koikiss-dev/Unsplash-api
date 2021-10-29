@@ -1,11 +1,12 @@
 import { apikey } from "./key.json";
 import React, { useState } from "react";
-export const usePhoto = ()=>{
+export const usePhoto = () => {
   const urlBase = "https://api.unsplash.com/search/photos?page=1";
   const [im, setIm] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const getImage = async (e) => {
+    setLoading(true);
     const fe = await fetch(
       urlBase + "&query=" + e.target.value + "&client_id=" + apikey
     );
@@ -16,5 +17,5 @@ export const usePhoto = ()=>{
       setLoading(false);
     }
   };
-  return [getImage, loading, im,]
-}
+  return [getImage, loading, im];
+};
